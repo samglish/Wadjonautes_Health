@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Carrotsuite navigation -->
+        <nav class="carrotsuite-nav">
+          <div class="logo">
+            <a href="index.html" class="active nav-item">
+              <img src="images/wadjo.jpg" alt="Wadjonautes" />
+             
+            </a>
+          </div>
+          <div class="user" id="user">
+        
+            <div class="user-img-wrapper">
+      
+            </div>
+          </div>
+        </nav>
+        <!-- end of feeds navigation -->
+      </header>
+      <main class="main">
+        
+        <section class="page-content">
+            <center>
+            <h1>INSCRIPTION</h1> </br></br>
+            </center>
+          <article class="header">
+          
+            <center>
+                <form action="/signup" method="post">
+                    <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required>
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                    <input type="password" id="cpassword" name="cpassword" placeholder="Confirmer" required></br>
+                    <button type="submit" name="action" value="register">S'inscrire</button> 
+                    
+                </form>
+            </br></br>
+            <a href="connexion.html"><h3>si vous avez déjà un compte, cliquez ici pour vous connecter</h3></a> 
+        </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuLinks = document.querySelectorAll(".sidebar .menu a");
+
+      for (const link of menuLinks) {
+        link.addEventListener("mouseenter", function () {
+          if (window.matchMedia("(max-width: 626px)").matches) {
+            const tooltip = this.querySelector("span").textContent;
+            this.setAttribute("title", tooltip);
+          } else {
+            this.removeAttribute("title");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

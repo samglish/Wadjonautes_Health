@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wadjonautes_Health</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Carrotsuite navigation -->
+        <nav class="carrotsuite-nav">
+          <div class="logo">
+            <a href="index.html" class="active nav-item">
+              <img src="images/wadjo.jpg" alt="Wadjonautes" />
+            </a>
+          </div>
+          <div class="user" id="user">
+            <a href="connexion.html" class="user-link">login</a>
+            <div class="user-img-wrapper">
+              <a href="connexion.html"><img src="images/useravatar.png" alt="User 1" /></a> 
+            </div>
+          </div>
+        </nav>
+        <!-- end of feeds navigation -->
+      </header>
+      <main class="main">
+        
+        <section class="page-content">
+          <article class="header">
+            <div style="width: 100vw; height: 100vh;" id="mapContainer"></div>
+  
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuLinks = document.querySelectorAll(".sidebar .menu a");
+
+      for (const link of menuLinks) {
+        link.addEventListener("mouseenter", function () {
+          if (window.matchMedia("(max-width: 626px)").matches) {
+            const tooltip = this.querySelector("span").textContent;
+            this.setAttribute("title", tooltip);
+          } else {
+            this.removeAttribute("title");
+          }
+        });
+      }
+    </script>
+  </body>
+  <script src="map.js"></script>
+</html>

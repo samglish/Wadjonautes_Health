@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Carrotsuite navigation -->
+        <nav class="carrotsuite-nav">
+          <div class="logo">
+            <a href="Accueil.html" class="active nav-item">
+              <img src="images/wadjo.jpg" width="1%" alt="Wadjonautes" />
+            </a>
+          </div>
+
+          
+          <div class="icons right">
+            <a href="#" class="nav-item">
+              <div class="badge"><span>5</span></div>
+              <i class="far fa-bell"></i>
+            </a>
+            <a href="#" class="nav-item"><i class="far fa-envelope"></i></a>
+          </div>
+          <div class="user" id="user">
+            <a href="#" class="user-link">Wadjonautes</a>
+           
+            <div class="user-img-wrapper">
+             <a href="index.html"> <img src="images/useravatar.png" alt="User 1" /><img src="images/deco.jpeg"/></a>
+            </div>
+           
+           
+          </div>
+        </nav>
+        <!-- end of feeds navigation -->
+      </header>
+      <main class="main">
+        
+        <section class="page-content">
+          <article class="header">
+            <center>
+              <h1>Paramètres</h1> </br></br>
+              </center>           
+         </article>
+          <article class="board">
+            <h1></h1>
+            <section class="boxes">
+            </section>
+              <div class="form-element">
+                <label for="start_date">Nom du médecin</label>
+                <input type="text" name="nom_medecin" id="nom_medecin" />
+                <label for="start_date">Email</label>
+                <input type="text" name="email_medecin" id="email_medecin" />
+                <label for="start_date">téléphone</label>
+                <input type="text" name="telephone_medecin" id="telephone_medecin" />
+              </div>         
+            </form>
+            <section class="create-client">
+              <button><i class="fas fa-plus"></i>Modifier</button>
+            </section>
+
+            <div class="form-element">
+              <label for="start_date">Nom de l'infirmier</label>
+              <input type="text" name="nom_infirmier" id="nom_infirmier" />
+              <label for="start_date">Email</label>
+              <input type="text" name="email_infirmier" id="email_infirmier" />
+              <label for="start_date">téléphone</label>
+              <input type="text" name="telephone_infirmier" id="telephone_infirmier" />
+            </div>         
+          </form>
+          <section class="create-client">
+            <button><i class="fas fa-plus"></i>Modifier</button>
+          </section>
+
+          <div class="form-element">
+            <label for="start_date">Nom de votre ami proche</label>
+            <input type="text" name="nom_ami" id="nom_ami" />
+            <label for="start_date">Email</label>
+            <input type="text" name="email_ami" id="email_ami" />
+            <label for="start_date">téléphone</label>
+            <input type="text" name="telephone_ami" id="telephone_ami" />
+          </div>         
+        </form>
+        <section class="create-client">
+          <button><i class="fas fa-plus"></i>Modifier</button>
+        </section>
+
+          </br></br>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuLinks = document.querySelectorAll(".sidebar .menu a");
+
+      for (const link of menuLinks) {
+        link.addEventListener("mouseenter", function () {
+          if (window.matchMedia("(max-width: 626px)").matches) {
+            const tooltip = this.querySelector("span").textContent;
+            this.setAttribute("title", tooltip);
+          } else {
+            this.removeAttribute("title");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
